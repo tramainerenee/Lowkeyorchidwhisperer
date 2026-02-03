@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Lowkey Orchid Whisperer | Phalaenopsis Care & Rescue Guide</title>
+    <meta name="description" content="Expert Phalaenopsis orchid care, root rot rescue, and rebloom strategies. Interactive tools, emergency guides, and digital products for orchid lovers.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1a3a2e;
+            --secondary: #2d5f4a;
+            --accent: #8b5fbf;
+            --light-accent: #b197d4;
+            --bg: #f8f9f5;
+            --card-bg: #ffffff;
+            --text: #2c3e37;
+            --text-muted: #6b7b75;
+            --border: #d4e2dc;
+            --success: #4caf50;
+            --warning: #ff9800;
+            --danger: #e74c3c;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 30px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+
+        h1 span {
+            color: var(--light-accent);
+            font-style: italic;
+        }
+
+        .tagline {
+            font-size: 1rem;
+            opacity: 0.9;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--light-accent);
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, rgba(139, 95, 191, 0.1) 0%, rgba(45, 95, 74, 0.1) 100%);
+            padding: 80px 0;
+            text-align: center;
+            border-bottom: 3px solid var(--accent);
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+            font-weight: 300;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto 40px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 15px 35px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(139, 95, 191, 0.3);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--accent);
+            border: 2px solid var(--accent);
+        }
+
+        .btn-secondary:hover {
+            background: var(--accent);
+            color: white;
+        }
+
+        /* Emergency Alert */
+        .emergency-banner {
+            background: var(--danger);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .emergency-banner:hover {
+            background: #c0392b;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--primary);
+            font-weight: 300;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: -30px auto 50px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        /* Grid Layouts */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 35px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border: 2px solid var(--border);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(139, 95, 191, 0.15);
+            border-color: var(--accent);
+        }
+
+        .card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .card p {
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        /* Interactive Tool Styles */
+        .tool-container {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            border: 2px solid var(--accent);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--primary);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        .form-group select,
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid var(--border);
+            border-radius: 6px;
+            font-size: 1rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group select:focus,
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 400;
+            cursor: pointer;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: auto;
+            cursor: pointer;
+        }
+
+        .result-box {
+            background: var(--bg);
+            border-left: 4px solid var(--accent);
+            padding: 25px;
+            margin-top: 30px;
+            border-radius: 6px;
+            display: none;
+        }
+
+        .result-box.show {
+            display: block;
+        }
+
+        .result-box h4 {
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+
+        .result-box ul {
+            list-style: none;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        .result-box li {
+            padding: 10px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .result-box li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: bold;
+        }
+
+        /* Digital Products */
+        .product-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 35px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            border: 2px solid var(--border);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(139, 95, 191, 0.15);
+            border-color: var(--accent);
+        }
+
+        .product-badge {
+            background: var(--accent);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .product-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin: 20px 0;
+        }
+
+        .product-features {
+            text-align: left;
+            margin: 25px 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        .product-features li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            color: var(--text-muted);
+        }
+
+        .product-features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: bold;
+        }
+
+        /* Tabs */
+        .tabs {
+            display: flex;
+            gap: 0;
+            border-bottom: 2px solid var(--border);
+            margin-bottom: 30px;
+        }
+
+        .tab {
+            padding: 15px 30px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            transition: all 0.3s ease;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        .tab.active {
+            color: var(--accent);
+            border-bottom: 3px solid var(--accent);
+            margin-bottom: -2px;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 60px 0 30px;
+            margin-top: 80px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            padding: 8px 0;
+        }
+
+        .footer-section a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--light-accent);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Emergency Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            overflow-y: auto;
+        }
+
+        .modal.show {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .modal-content {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 12px;
+            max-width: 700px;
+            width: 100%;
+            position: relative;
+            margin: 20px;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 2rem;
+            cursor: pointer;
+            color: var(--text-muted);
+            transition: color 0.3s ease;
+        }
+
+        .close-modal:hover {
+            color: var(--danger);
+        }
+
+        .steps {
+            counter-reset: step-counter;
+            list-style: none;
+        }
+
+        .steps li {
+            counter-increment: step-counter;
+            padding: 15px 0;
+            padding-left: 50px;
+            position: relative;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        .steps li:before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 10px;
+            background: var(--accent);
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .grid-2, .grid-3 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .highlight {
+            background: rgba(139, 95, 191, 0.1);
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="emergency-banner" onclick="openEmergencyModal()">
+        🚨 ORCHID EMERGENCY? Click here for immediate root rot rescue protocol
+    </div>
+
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div>
+                    <h1>The Lowkey <span>Orchid Whisperer</span></h1>
+                    <p class="tagline">Phalaenopsis care, rescue, & rebloom mastery</p>
+                </div>
+                <nav>
+                    <a href="#rescue">Rescue</a>
+                    <a href="#care">Care Guide</a>
+                    <a href="#tools">Tools</a>
+                    <a href="#products">Products</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Your Orchid Doesn't Have to Die</h2>
+            <p>Root rot? Yellow leaves? Won't rebloom? I've rescued hundreds of Phalaenopsis orchids and helped them thrive. Here's everything I've learned.</p>
+            <div class="cta-buttons">
+                <a href="#diagnostic" class="btn btn-primary">Diagnose My Orchid</a>
+                <a href="#products" class="btn btn-secondary">Digital Guides</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="rescue">
+        <div class="container">
+            <h2 class="section-title">Emergency Rescue Protocols</h2>
+            <p class="section-subtitle">Step-by-step guides for the most common orchid emergencies</p>
+
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-icon">🆘</div>
+                    <h3>Root Rot Rescue</h3>
+                    <p>Mushy roots, foul smell, and yellowing leaves? Root rot is serious but fixable. Learn the exact protocol to save your orchid.</p>
+                    <a href="#" class="btn btn-primary" onclick="openEmergencyModal(); return false;">Get Protocol</a>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">💧</div>
+                    <h3>Overwatering Recovery</h3>
+                    <p>Too much love is killing your orchid. Here's how to identify overwatering damage and reverse it before it's too late.</p>
+                    <a href="#" class="btn btn-secondary">Learn More</a>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🌡️</div>
+                    <h3>Temperature Shock</h3>
+                    <p>Sudden temperature changes can cause bud blast and leaf drop. Quick action can minimize damage and help recovery.</p>
+                    <a href="#" class="btn btn-secondary">Learn More</a>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🐛</div>
+                    <h3>Pest Invasion</h3>
+                    <p>Scale, mealybugs, or spider mites? Identify the pest, understand the threat level, and eliminate them safely.</p>
+                    <a href="#" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="care" style="background: var(--bg);">
+        <div class="container">
+            <h2 class="section-title">Complete Phalaenopsis Care Guide</h2>
+            
+            <div class="tabs">
+                <button class="tab active" onclick="switchTab(event, 'watering')">Watering</button>
+                <button class="tab" onclick="switchTab(event, 'light')">Light</button>
+                <button class="tab" onclick="switchTab(event, 'fertilizing')">Fertilizing</button>
+                <button class="tab" onclick="switchTab(event, 'reblooming')">Reblooming</button>
+            </div>
+
+            <div id="watering" class="tab-content active">
+                <div class="tool-container">
+                    <h3>Watering Protocol</h3>
+                    <p>The #1 killer of orchids is improper watering. Here's the foolproof method:</p>
+                    <ul class="steps">
+                        <li><strong>Check before watering:</strong> Stick your finger 1-2 inches into the potting medium. Water only when it's completely dry.</li>
+                        <li><strong>The ice cube myth:</strong> Don't use ice cubes. Room temperature water only.</li>
+                        <li><strong>Proper technique:</strong> Water thoroughly until water runs out the drainage holes. Let it drain completely.</li>
+                        <li><strong>Frequency:</strong> Typically every 7-10 days, but always check the medium first.</li>
+                        <li><strong>Never let it sit in water:</strong> Empty the decorative pot or saucer after watering.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="light" class="tab-content">
+                <div class="tool-container">
+                    <h3>Light Requirements</h3>
+                    <p>Phalaenopsis orchids are low-light orchids, but they still need the right amount:</p>
+                    <ul class="steps">
+                        <li><strong>Ideal location:</strong> East or west-facing window with sheer curtains.</li>
+                        <li><strong>Avoid direct sunlight:</strong> Direct sun will burn the leaves. You'll see dark brown/black spots if this happens.</li>
+                        <li><strong>Check leaf color:</strong> Dark green leaves = too little light. Reddish/yellowish leaves = too much light. Medium green is perfect.</li>
+                        <li><strong>Artificial lighting:</strong> If natural light is limited, use LED grow lights 12-14 hours per day.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="fertilizing" class="tab-content">
+                <div class="tool-container">
+                    <h3>Fertilizing Strategy</h3>
+                    <p>Feed your orchid to fuel healthy growth and abundant blooms:</p>
+                    <ul class="steps">
+                        <li><strong>Formula:</strong> Use a balanced orchid fertilizer (20-20-20 or specialized orchid formula).</li>
+                        <li><strong>Dilution:</strong> "Weekly, weakly" - fertilize every week at 1/4 strength.</li>
+                        <li><strong>When NOT to fertilize:</strong> Never fertilize a sick, stressed, or freshly repotted orchid.</li>
+                        <li><strong>Flush monthly:</strong> Once a month, water thoroughly without fertilizer to prevent salt buildup.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="reblooming" class="tab-content">
+                <div class="tool-container">
+                    <h3>Reblooming Your Phalaenopsis</h3>
+                    <p>Getting your orchid to rebloom is 100% possible with the right approach:</p>
+                    <ul class="steps">
+                        <li><strong>After blooms fade:</strong> Cut the spike just above the second node (bump on the stem) for potential secondary spike, or cut at base for larger blooms next time.</li>
+                        <li><strong>The secret trigger:</strong> Phalaenopsis need a temperature drop to initiate blooming. 10-15°F difference between day and night for 2-4 weeks.</li>
+                        <li><strong>Timing:</strong> Expect new spikes in fall/winter when natural temperature drops occur.</li>
+                        <li><strong>Be patient:</strong> It can take 3-6 months after the temperature trigger before you see blooms.</li>
+                        <li><strong>Don't move it:</strong> Once a spike appears, don't move the plant. It can cause bud blast.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tools">
+        <div class="container">
+            <h2 class="section-title">Interactive Tools</h2>
+            
+            <div class="grid-2">
+                <div class="card">
+                    <h3>🩺 Orchid Diagnostic Tool</h3>
+                    <p>Answer a few questions and get a personalized diagnosis and treatment plan for your orchid's specific issues.</p>
+                    <a href="#diagnostic" class="btn btn-primary">Start Diagnosis</a>
+                </div>
+
+                <div class="card">
+                    <h3>💧 Watering Schedule Calculator</h3>
+                    <p>Based on your environment, potting medium, and pot type, get a customized watering schedule.</p>
+                    <a href="#watering-calc" class="btn btn-primary">Calculate Schedule</a>
+                </div>
+
+                <div class="card">
+                    <h3>🌸 Bloom Prediction Tracker</h3>
+                    <p>Track your orchid's growth cycle and predict when you'll see blooms based on spike development and temperature.</p>
+                    <a href="#bloom-tracker" class="btn btn-primary">Track Blooms</a>
+                </div>
+
+                <div class="card">
+                    <h3>📦 Repotting Readiness Check</h3>
+                    <p>Not sure if it's time to repot? This tool will tell you if your orchid needs repotting and when to do it.</p>
+                    <a href="#repot-check" class="btn btn-primary">Check Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="diagnostic" style="background: var(--bg);">
+        <div class="container">
+            <h2 class="section-title">What's Wrong With My Orchid?</h2>
+            <p class="section-subtitle">Answer these questions to get a diagnosis</p>
+
+            <div class="tool-container">
+                <div class="form-group">
+                    <label>What are the primary symptoms?</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="symptom" value="yellow-leaves"> Yellow or brown leaves</label>
+                        <label><input type="checkbox" name="symptom" value="wrinkled-leaves"> Wrinkled or limp leaves</label>
+                        <label><input type="checkbox" name="symptom" value="root-issues"> Mushy, black, or no roots visible</label>
+                        <label><input type="checkbox" name="symptom" value="no-blooms"> Won't rebloom or dropped buds</label>
+                        <label><input type="checkbox" name="symptom" value="spots"> Spots or discoloration on leaves</label>
+                        <label><input type="checkbox" name="symptom" value="pests"> Visible pests or sticky residue</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>How often do you water?</label>
+                    <select id="watering-frequency">
+                        <option value="">Select...</option>
+                        <option value="daily">Daily</option>
+                        <option value="every-few-days">Every 2-3 days</option>
+                        <option value="weekly">Once a week</option>
+                        <option value="biweekly">Every 2 weeks</option>
+                        <option value="rarely">Less than every 2 weeks</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Where is your orchid located?</label>
+                    <select id="location">
+                        <option value="">Select...</option>
+                        <option value="direct-sun">In direct sunlight</option>
+                        <option value="bright-indirect">Bright indirect light (near window)</option>
+                        <option value="low-light">Low light (away from windows)</option>
+                        <option value="artificial">Under artificial lights</option>
+                    </select>
+                </div>
+
+                <button class="btn btn-primary" onclick="runDiagnostic()">Get Diagnosis</button>
+
+                <div id="diagnostic-result" class="result-box">
+                    <h4>Your Diagnosis & Treatment Plan:</h4>
+                    <div id="diagnosis-content"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="watering-calc">
+        <div class="container">
+            <h2 class="section-title">Watering Schedule Calculator</h2>
+            
+            <div class="tool-container">
+                <div class="form-group">
+                    <label>Potting medium type:</label>
+                    <select id="medium-type">
+                        <option value="">Select...</option>
+                        <option value="bark">Bark mix (most common)</option>
+                        <option value="sphagnum">Sphagnum moss</option>
+                        <option value="mixed">Mixed medium</option>
+                        <option value="leca">LECA/hydroponics</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Pot type:</label>
+                    <select id="pot-type">
+                        <option value="">Select...</option>
+                        <option value="clear-plastic">Clear plastic with drainage</option>
+                        <option value="ceramic">Ceramic/decorative</option>
+                        <option value="clay">Terra cotta/clay</option>
+                        <option value="slotted">Slotted orchid pot</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Home humidity level:</label>
+                    <select id="humidity">
+                        <option value="">Select...</option>
+                        <option value="low">Low (below 40%)</option>
+                        <option value="medium">Medium (40-60%)</option>
+                        <option value="high">High (above 60%)</option>
+                        <option value="unknown">Not sure</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Temperature in your home:</label>
+                    <select id="temperature">
+                        <option value="">Select...</option>
+                        <option value="cool">Cool (60-70°F)</option>
+                        <option value="moderate">Moderate (70-75°F)</option>
+                        <option value="warm">Warm (75-80°F)</option>
+                        <option value="hot">Hot (above 80°F)</option>
+                    </select>
+                </div>
+
+                <button class="btn btn-primary" onclick="calculateWatering()">Calculate Schedule</button>
+
+                <div id="watering-result" class="result-box">
+                    <h4>Your Customized Watering Schedule:</h4>
+                    <div id="watering-content"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="bloom-tracker" style="background: var(--bg);">
+        <div class="container">
+            <h2 class="section-title">Bloom Prediction Tracker</h2>
+            
+            <div class="tool-container">
+                <div class="form-group">
+                    <label>Current bloom stage:</label>
+                    <select id="bloom-stage">
+                        <option value="">Select...</option>
+                        <option value="no-spike">No spike visible yet</option>
+                        <option value="spike-emerging">Spike just emerging (1-3 inches)</option>
+                        <option value="spike-growing">Spike growing (3-6 inches)</option>
+                        <option value="buds-forming">Buds forming on spike</option>
+                        <option value="buds-swelling">Buds swelling/showing color</option>
+                        <option value="blooming">Currently blooming</option>
+                        <option value="post-bloom">Blooms finished</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>When did you last see temperature drops (10-15°F between day/night)?</label>
+                    <select id="temp-drop">
+                        <option value="">Select...</option>
+                        <option value="current">Currently experiencing them</option>
+                        <option value="recent">Within last month</option>
+                        <option value="few-months">2-3 months ago</option>
+                        <option value="long-ago">More than 3 months ago</option>
+                        <option value="never">Never/Not sure</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>How long since last bloom cycle ended?</label>
+                    <select id="last-bloom">
+                        <option value="">Select...</option>
+                        <option value="current">Currently blooming</option>
+                        <option value="month">1-2 months</option>
+                        <option value="few-months">3-6 months</option>
+                        <option value="long">6-12 months</option>
+                        <option value="very-long">Over a year</option>
+                        <option value="never">Never bloomed for me</option>
+                    </select>
+                </div>
+
+                <button class="btn btn-primary" onclick="predictBloom()">Predict Bloom Timeline</button>
+
+                <div id="bloom-result" class="result-box">
+                    <h4>Your Bloom Prediction:</h4>
+                    <div id="bloom-content"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products">
+        <div class="container">
+            <h2 class="section-title">Digital Products & Guides</h2>
+            <p class="section-subtitle">Deep-dive resources for serious orchid lovers</p>
+
+            <div class="grid-3">
+                <div class="product-card">
+                    <span class="product-badge">Most Popular</span>
+                    <h3>The Root Rot Rescue Protocol</h3>
+                    <p class="product-price">$27</p>
+                    <p>Complete step-by-step guide with photos, video demonstrations, and emergency checklists.</p>
+                    <ul class="product-features">
+                        <li>40-page illustrated PDF guide</li>
+                        <li>Video walkthrough of root trimming</li>
+                        <li>Recommended products list with links</li>
+                        <li>Before/after case studies</li>
+                        <li>Lifetime updates included</li>
+                    </ul>
+                    <button class="btn btn-primary">Buy Now</button>
+                </div>
+
+                <div class="product-card">
+                    <span class="product-badge">Best Value</span>
+                    <h3>The Rebloom Mastery Bundle</h3>
+                    <p class="product-price">$47</p>
+                    <p>Everything you need to get consistent, abundant blooms year after year.</p>
+                    <ul class="product-features">
+                        <li>Comprehensive rebloom guide (60+ pages)</li>
+                        <li>Temperature tracking worksheets</li>
+                        <li>Bloom journal templates</li>
+                        <li>Troubleshooting flowcharts</li>
+                        <li>Email support for 30 days</li>
+                    </ul>
+                    <button class="btn btn-primary">Buy Now</button>
+                </div>
+
+                <div class="product-card">
+                    <span class="product-badge">Premium</span>
+                    <h3>Complete Orchid Mastery Course</h3>
+                    <p class="product-price">$97</p>
+                    <p>From rescue to reblooming - master every aspect of Phalaenopsis care.</p>
+                    <ul class="product-features">
+                        <li>6 modules, 4+ hours of video</li>
+                        <li>All digital guides included</li>
+                        <li>Private community access</li>
+                        <li>Monthly live Q&A sessions</li>
+                        <li>Personalized care plan consultation</li>
+                        <li>Lifetime access + updates</li>
+                    </ul>
+                    <button class="btn btn-primary">Buy Now</button>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 50px; padding: 40px; background: var(--bg); border-radius: 12px;">
+                <h3 style="margin-bottom: 20px; color: var(--primary);">🎁 Free Resource</h3>
+                <p style="margin-bottom: 25px; font-size: 1.1rem;">Get the <strong>Emergency Orchid Care Checklist</strong> - a printable quick-reference guide for the most common orchid problems.</p>
+                <div class="form-group" style="max-width: 400px; margin: 0 auto;">
+                    <input type="email" placeholder="Enter your email" style="margin-bottom: 15px;">
+                    <button class="btn btn-primary">Download Free Guide</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background: var(--bg);">
+        <div class="container">
+            <h2 class="section-title">Recommended Products</h2>
+            <p class="section-subtitle">Affiliate links to the exact products I use and trust</p>
+
+            <div class="grid-3">
+                <div class="card">
+                    <h3>Best Potting Mix</h3>
+                    <p><strong>Better-Gro Orchid Bark</strong></p>
+                    <p>Perfect drainage, doesn't break down quickly, and affordable. This is what I use for all my orchids.</p>
+                    <a href="#" class="btn btn-secondary">View on Amazon →</a>
+                </div>
+
+                <div class="card">
+                    <h3>Best Fertilizer</h3>
+                    <p><strong>Miracle-Gro Orchid Food</strong></p>
+                    <p>Easy to use, properly balanced formula. Follow the "weekly, weakly" rule with this and you're set.</p>
+                    <a href="#" class="btn btn-secondary">View on Amazon →</a>
+                </div>
+
+                <div class="card">
+                    <h3>Clear Plastic Pots</h3>
+                    <p><strong>rePotme Clear Orchid Pots</strong></p>
+                    <p>Being able to see the roots is crucial for monitoring health. These have excellent drainage too.</p>
+                    <a href="#" class="btn btn-secondary">View on rePotme →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>The Lowkey Orchid Whisperer</h3>
+                    <p>Helping orchid lovers rescue, care for, and rebloom their Phalaenopsis orchids with confidence.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#rescue">Emergency Rescue</a></li>
+                        <li><a href="#care">Care Guide</a></li>
+                        <li><a href="#tools">Interactive Tools</a></li>
+                        <li><a href="#products">Digital Products</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Affiliate Disclosure</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Stay Connected</h3>
+                    <p>Join the email list for weekly orchid care tips and exclusive guides.</p>
+                    <input type="email" placeholder="Your email" style="margin: 15px 0; width: 100%; padding: 10px; border-radius: 6px; border: none;">
+                    <button class="btn btn-primary" style="width: 100%;">Subscribe</button>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 The Lowkey Orchid Whisperer. All rights reserved. Built with love for orchids.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Emergency Modal -->
+    <div id="emergencyModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeEmergencyModal()">&times;</span>
+            <h2 style="color: var(--danger); margin-bottom: 20px;">🚨 Root Rot Emergency Protocol</h2>
+            <p style="margin-bottom: 25px; font-size: 1.1rem;"><strong>Act fast. Root rot can kill your orchid in days if left untreated.</strong></p>
+            
+            <h3 style="margin: 25px 0 15px; color: var(--primary);">Immediate Actions (Do Today):</h3>
+            <ol class="steps">
+                <li><strong>Remove from pot:</strong> Gently remove the orchid from its pot. Don't worry about breaking a few roots - you're trying to save the plant.</li>
+                <li><strong>Rinse roots:</strong> Rinse all the old potting medium away under lukewarm water. You need to see what you're working with.</li>
+                <li><strong>Assess the damage:</strong> Healthy roots are firm and white/green. Rotted roots are mushy, brown/black, or hollow. Gently squeeze each root.</li>
+                <li><strong>Cut away rot:</strong> Use sterilized scissors or pruning shears (wipe with rubbing alcohol). Cut all rotted roots back to healthy tissue. Be ruthless - leaving any rot will spread.</li>
+                <li><strong>Treat with hydrogen peroxide:</strong> Mix 1 part 3% hydrogen peroxide with 2 parts water. Soak remaining roots for 5-10 minutes. This kills bacteria/fungi.</li>
+                <li><strong>Let it dry:</strong> Leave the orchid out of any medium for 24-48 hours in a shaded spot. This lets cut ends callus over.</li>
+                <li><strong>Repot in fresh medium:</strong> Use NEW bark mix (never reuse old medium). Choose a smaller pot if you removed a lot of roots.</li>
+                <li><strong>Change watering habits:</strong> This happened because of overwatering. Water less frequently - only when medium is completely dry.</li>
+            </ol>
+
+            <div style="background: rgba(255,152,0,0.1); padding: 20px; border-radius: 8px; margin: 25px 0;">
+                <h4 style="color: var(--warning); margin-bottom: 10px;">⚠️ Critical Warning</h4>
+                <p>If you're left with <strong>zero healthy roots</strong>, your orchid is in critical condition but not necessarily dead. You'll need to use sphagnum moss therapy and provide extra care. Consider getting the full Root Rot Rescue Protocol guide for detailed recovery instructions.</p>
+            </div>
+
+            <h3 style="margin: 25px 0 15px; color: var(--primary);">What Happens Next:</h3>
+            <ul style="list-style: none; padding-left: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
+                <li style="padding: 10px 0;">📅 <strong>Days 1-7:</strong> Don't water. Monitor for new root growth (look for green tips).</li>
+                <li style="padding: 10px 0;">📅 <strong>Week 2-4:</strong> Water sparingly only when medium is bone dry. New roots should begin emerging.</li>
+                <li style="padding: 10px 0;">📅 <strong>Month 2-3:</strong> Once you have several new roots growing, return to normal care schedule.</li>
+            </ul>
+
+            <button class="btn btn-primary" style="width: 100%; margin-top: 25px;">Get the Complete Root Rot Rescue Guide ($27)</button>
+        </div>
+    </div>
+
+    <script>
+        // Emergency Modal
+        function openEmergencyModal() {
+            document.getElementById('emergencyModal').classList.add('show');
+        }
+
+        function closeEmergencyModal() {
+            document.getElementById('emergencyModal').classList.remove('show');
+        }
+
+        // Close modal on outside click
+        window.onclick = function(event) {
+            const modal = document.getElementById('emergencyModal');
+            if (event.target == modal) {
+                closeEmergencyModal();
+            }
+        }
+
+        // Tab switching
+        function switchTab(event, tabName) {
+            // Hide all tab content
+            const tabContents = document.getElementsByClassName('tab-content');
+            for (let content of tabContents) {
+                content.classList.remove('active');
+            }
+
+            // Remove active class from all tabs
+            const tabs = document.getElementsByClassName('tab');
+            for (let tab of tabs) {
+                tab.classList.remove('active');
+            }
+
+            // Show selected tab and mark button as active
+            document.getElementById(tabName).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+
+        // Diagnostic Tool
+        function runDiagnostic() {
+            const symptoms = Array.from(document.querySelectorAll('input[name="symptom"]:checked')).map(cb => cb.value);
+            const watering = document.getElementById('watering-frequency').value;
+            const location = document.getElementById('location').value;
+
+            if (symptoms.length === 0 || !watering || !location) {
+                alert('Please answer all questions to get an accurate diagnosis.');
+                return;
+            }
+
+            let diagnosis = '<p><strong>Based on your answers:</strong></p>';
+            let recommendations = [];
+
+            // Analyze symptoms
+            if (symptoms.includes('root-issues') || (symptoms.includes('yellow-leaves') && (watering === 'daily' || watering === 'every-few-days'))) {
+                diagnosis += '<p style="color: var(--danger); font-weight: bold; margin: 15px 0;">⚠️ HIGH PRIORITY: Root rot likely</p>';
+                recommendations.push('Immediately check roots - remove from pot and inspect');
+                recommendations.push('Cut away all mushy/black roots with sterile scissors');
+                recommendations.push('Treat with hydrogen peroxide solution');
+                recommendations.push('Repot in fresh bark mix');
+                recommendations.push('Reduce watering frequency significantly');
+            }
+
+            if (symptoms.includes('wrinkled-leaves') && watering === 'rarely') {
+                diagnosis += '<p style="color: var(--warning); font-weight: bold; margin: 15px 0;">💧 Underwatering detected</p>';
+                recommendations.push('Increase watering frequency to weekly');
+                recommendations.push('Check that pot has proper drainage holes');
+                recommendations.push('Soak roots in room temperature water for 15 minutes');
+            }
+
+            if (symptoms.includes('no-blooms')) {
+                diagnosis += '<p style="color: var(--accent); font-weight: bold; margin: 15px 0;">🌸 Reblooming issues</p>';
+                recommendations.push('Orchid needs 10-15°F temperature drop between day/night for 2-4 weeks');
+                recommendations.push('Ensure adequate light (east/west window with sheer curtain)');
+                recommendations.push('Fertilize weekly with orchid fertilizer at 1/4 strength');
+                recommendations.push('Be patient - can take 3-6 months to see blooms after trigger');
+            }
+
+            if (location === 'direct-sun' && symptoms.includes('spots')) {
+                diagnosis += '<p style="color: var(--danger); font-weight: bold; margin: 15px 0;">☀️ Sunburn detected</p>';
+                recommendations.push('Move away from direct sunlight immediately');
+                recommendations.push('Place in bright indirect light (near window with sheer curtain)');
+                recommendations.push('Damaged leaves won\'t recover - focus on preventing further damage');
+            }
+
+            if (symptoms.includes('pests')) {
+                diagnosis += '<p style="color: var(--warning); font-weight: bold; margin: 15px 0;">🐛 Pest infestation</p>';
+                recommendations.push('Isolate this orchid from others immediately');
+                recommendations.push('Identify pest type (scale, mealybugs, spider mites)');
+                recommendations.push('Treat with neem oil or insecticidal soap');
+                recommendations.push('Repeat treatment every 5-7 days for 3 weeks');
+            }
+
+            // Display results
+            const resultBox = document.getElementById('diagnostic-result');
+            const resultContent = document.getElementById('diagnosis-content');
+            
+            resultContent.innerHTML = diagnosis + '<h4 style="margin: 20px 0 10px;">Treatment Plan:</h4><ul>' + 
+                recommendations.map(r => `<li>${r}</li>`).join('') + '</ul>' +
+                '<p style="margin-top: 25px; padding: 15px; background: var(--bg); border-radius: 6px;"><strong>Need detailed help?</strong> Check out our digital guides for step-by-step instructions with photos and videos.</p>';
+            
+            resultBox.classList.add('show');
+            resultBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        // Watering Calculator
+        function calculateWatering() {
+            const medium = document.getElementById('medium-type').value;
+            const pot = document.getElementById('pot-type').value;
+            const humidity = document.getElementById('humidity').value;
+            const temp = document.getElementById('temperature').value;
+
+            if (!medium || !pot || !humidity || !temp) {
+                alert('Please answer all questions to get your watering schedule.');
+                return;
+            }
+
+            let baseDays = 7;
+            let recommendations = [];
+
+            // Adjust based on medium
+            if (medium === 'bark') baseDays = 7;
+            if (medium === 'sphagnum') baseDays = 10;
+            if (medium === 'mixed') baseDays = 8;
+            if (medium === 'leca') baseDays = 5;
+
+            // Adjust based on pot
+            if (pot === 'ceramic') baseDays += 2;
+            if (pot === 'clay') baseDays -= 1;
+            if (pot === 'slotted') baseDays -= 1;
+
+            // Adjust based on humidity
+            if (humidity === 'low') baseDays -= 1;
+            if (humidity === 'high') baseDays += 2;
+
+            // Adjust based on temperature
+            if (temp === 'cool') baseDays += 1;
+            if (temp === 'warm') baseDays -= 1;
+            if (temp === 'hot') baseDays -= 2;
+
+            recommendations.push(`<strong>Water every ${baseDays} days</strong> as a starting point`);
+            recommendations.push('Always check medium before watering - it should be completely dry 1-2 inches down');
+            recommendations.push('Water thoroughly until water runs out drainage holes');
+            recommendations.push('Empty any water that collects in decorative pots/saucers');
+            
+            if (medium === 'bark') {
+                recommendations.push('Bark dries quickly - check more frequently in summer');
+            }
+            if (medium === 'sphagnum') {
+                recommendations.push('Sphagnum holds moisture longer - err on the side of underwatering');
+            }
+            if (humidity === 'low') {
+                recommendations.push('Low humidity means faster drying - consider a humidity tray');
+            }
+            if (pot === 'ceramic') {
+                recommendations.push('Ceramic pots hold moisture longer - wait an extra day if unsure');
+            }
+
+            const resultBox = document.getElementById('watering-result');
+            const resultContent = document.getElementById('watering-content');
+            
+            resultContent.innerHTML = '<ul>' + recommendations.map(r => `<li>${r}</li>`).join('') + '</ul>' +
+                '<p style="margin-top: 20px; padding: 15px; background: rgba(139, 95, 191, 0.1); border-radius: 6px;"><strong>Pro Tip:</strong> This schedule is a starting point. Adjust based on how quickly YOUR specific orchid\'s medium dries out. Every environment is different!</p>';
+            
+            resultBox.classList.add('show');
+            resultBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        // Bloom Prediction
+        function predictBloom() {
+            const stage = document.getElementById('bloom-stage').value;
+            const tempDrop = document.getElementById('temp-drop').value;
+            const lastBloom = document.getElementById('last-bloom').value;
+
+            if (!stage || !tempDrop || !lastBloom) {
+                alert('Please answer all questions to get your bloom prediction.');
+                return;
+            }
+
+            let prediction = '';
+            let tips = [];
+
+            if (stage === 'no-spike') {
+                if (tempDrop === 'current' || tempDrop === 'recent') {
+                    prediction = '<p style="font-size: 1.2rem; color: var(--success); font-weight: bold;">🌸 Expect to see a spike emerging in 4-8 weeks!</p>';
+                    tips.push('Keep providing temperature drops for 2-4 weeks total');
+                    tips.push('Don\'t move the orchid once spike appears');
+                    tips.push('Continue regular care - water and fertilize as normal');
+                } else if (tempDrop === 'few-months') {
+                    prediction = '<p style="font-size: 1.2rem; color: var(--accent);">🤔 You should have seen a spike by now. Let\'s trigger blooming:</p>';
+                    tips.push('Create temperature drops: 10-15°F difference between day and night');
+                    tips.push('Place in cooler spot at night (60-65°F) for 2-4 weeks');
+                    tips.push('Ensure adequate light - blooming requires energy');
+                    tips.push('Spike should appear 4-8 weeks after temperature treatment');
+                } else {
+                    prediction = '<p style="font-size: 1.2rem; color: var(--warning);">⏰ Time to trigger blooming:</p>';
+                    tips.push('Your orchid needs a temperature trigger to bloom');
+                    tips.push('Provide 10-15°F temperature drop between day/night for 2-4 weeks');
+                    tips.push('Wait for fall/winter when natural temperature drops occur, or use AC/open windows');
+                    tips.push('After 2-4 weeks of temp drops, expect spike in 4-8 weeks');
+                }
+            } else if (stage === 'spike-emerging' || stage === 'spike-growing') {
+                prediction = '<p style="font-size: 1.2rem; color: var(--success); font-weight: bold;">🎉 You\'re on track! Blooms coming in 8-12 weeks!</p>';
+                tips.push('DO NOT move the orchid - this can cause bud blast');
+                tips.push('Continue regular watering and fertilizing');
+                tips.push('Spike will continue growing until buds form');
+                tips.push('Be patient - spikes can take 2-3 months to fully develop');
+            } else if (stage === 'buds-forming' || stage === 'buds-swelling') {
+                prediction = '<p style="font-size: 1.2rem; color: var(--success); font-weight: bold;">🌺 So close! Blooms opening in 2-4 weeks!</p>';
+                tips.push('CRITICAL: Do not move the plant AT ALL');
+                tips.push('Maintain consistent temperatures (no sudden changes)');
+                tips.push('Water carefully - don\'t get water on buds');
+                tips.push('Watch for first blooms to open from bottom of spike first');
+            } else if (stage === 'blooming') {
+                prediction = '<p style="font-size: 1.2rem; color: var(--success); font-weight: bold;">🌸 Enjoy your blooms! They can last 2-4 months!</p>';
+                tips.push('Blooms can last 8-16 weeks with proper care');
+                tips.push('Keep away from heat sources and direct sun');
+                tips.push('Water normally - orchids can bloom and grow roots simultaneously');
+                tips.push('When blooms fade, decide: cut above node for secondary spike, or cut at base for next cycle');
+            } else if (stage === 'post-bloom') {
+                prediction = '<p style="font-size: 1.2rem; color: var(--accent);">🔄 Recovery phase - next blooms in 6-12 months</p>';
+                tips.push('Cut spike: above 2nd node for potential secondary spike (smaller blooms), or at base for larger next cycle');
+                tips.push('Focus on growing strong roots and leaves');
+                tips.push('Fertilize regularly to build energy for next bloom cycle');
+                tips.push('Wait for natural temperature drops in fall/winter to trigger next cycle');
+            }
+
+            if (lastBloom === 'very-long' || lastBloom === 'never') {
+                tips.push('<strong style="color: var(--danger);">⚠️ Extended non-blooming:</strong> Check light levels, fertilizer, and temperature drops');
+            }
+
+            const resultBox = document.getElementById('bloom-result');
+            const resultContent = document.getElementById('bloom-content');
+            
+            resultContent.innerHTML = prediction + '<h4 style="margin: 25px 0 15px;">What to do now:</h4><ul>' + 
+                tips.map(t => `<li>${t}</li>`).join('') + '</ul>';
+            
+            resultBox.classList.add('show');
+            resultBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+    </script>
+</body>
+</html>
